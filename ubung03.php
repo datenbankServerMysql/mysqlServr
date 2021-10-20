@@ -32,7 +32,6 @@ SHOW COLUMNS FROM " . $_GET['datenbankname']." . ". $_GET['tabellenname']."
          ";
 
       $columns = $conn->query($sql)or die("Fehler in der query:" . $conn->error);
-      if ($columns->num_rows > 0) {
         // output data of each row
         while($column = $columns->fetch_assoc()) {
           //ta($column);
@@ -49,7 +48,7 @@ SHOW COLUMNS FROM " . $_GET['datenbankname']." . ". $_GET['tabellenname']."
       } else {
         echo "<p>Es werde keine Tabelle ausgewählt</p>";
       }
-        }
+        
 
         ?>
      </ul>
