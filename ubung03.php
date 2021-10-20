@@ -35,7 +35,7 @@ SHOW COLUMNS FROM " . $_GET['datenbankname']." . ". $_GET['tabellenname']."
         // output data of each row
         while($column = $columns->fetch_assoc()) {
           //ta($column);
-         echo '<li>Spalte: '. $column['Field'].'</li>
+         echo '<li>Feld: '. $column['Field'].'</li>
          <ul>
          <li>Typ - Länge: '.$column['Type'].'</li>
           <li>Null erlaubt : '.$column['Null'].'</li>
